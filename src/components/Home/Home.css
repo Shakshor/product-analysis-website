@@ -1,0 +1,35 @@
+.home-area {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 15px;
+    border: 1px solid red;
+}
+
+.product-details {
+    width: 50%;
+    text-align: left;
+}
+
+.product-pic {
+    width: 45%;
+}
+
+.product-pic img {
+    width: 90%;
+    height: 60vh;
+}
+
+/* ------ reviews area -------------- */
+.reviews-area {
+    border: 2px solid blue;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
