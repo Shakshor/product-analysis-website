@@ -1,0 +1,11 @@
+.header a {
+    text-decoration: none;
+    margin: 30px;
+    color: black;
+    font-size: 19px;
+    padding: 10px;
+}
+
+.header a:hover {
+    color: blue;
+}
