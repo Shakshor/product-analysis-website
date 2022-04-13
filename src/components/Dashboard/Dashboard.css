@@ -1,0 +1,10 @@
+.chart-title {
+    color: rgb(18, 117, 210);
+    margin: 20px;
+    padding: 30px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+}
