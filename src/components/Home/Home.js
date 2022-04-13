@@ -1,30 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useFakeData from '../../hooks/useFakeData';
-import img from '../../images/DellLaptop.jpg';
+import ProductIntro from '../ProductIntro/ProductIntro';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import './Home.css';
 
 const Home = () => {
     const [reviews, setReviews] = useFakeData();
+    const newReviews = reviews.slice(0, 3);
+    const navigate = useNavigate();
 
     return (
         <main className='home-area'>
-            <section className='product-area'>
-                <div className="product-details">
-                    <h1>CHOOSE YOUR LAPTOP</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptate magni nulla nobis odit? Placeat optio voluptatibus cupiditate amet, eveniet aut, dolores vel autem eius, repudiandae et doloremque saepe perspiciatis?</p>
-                </div>
-                <div className="product-pic">
-                    <img src={img} alt="" />
-                </div>
-            </section>
-            <section>
+
+            <ProductIntro></ProductIntro>
+
+            <section className='reviews-section'>
                 <h2>Customer Reviews:{reviews.length}</h2>
                 <div className='reviews-area'>
                     {
-                        reviews.map(review => <ReviewItem key={review.id} review={review}></ReviewItem>)
+                        newReviews.map(review => <ReviewItem key={review.id} review={review}></ReviewItem>)
                     }
                 </div>
+                {/* ------- using event handler ----- */}
+                <button className='see-all-btn' onClick={() => navigate('/reviews')}>See All Reviews</button>
             </section>
         </main>
     );

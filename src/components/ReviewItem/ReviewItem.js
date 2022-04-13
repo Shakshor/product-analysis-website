@@ -2,15 +2,14 @@ import React from 'react';
 import './ReviewItem.css'
 
 const ReviewItem = (props) => {
-    // console.log(props);
-    const { img, name, text, ratings } = props.review;
+    const { img, name, review, ratings } = props.review;
     return (
         <div className='reviewItem-area'>
             <img src={img} alt="" />
             <div>
-                <h4>Name: {name}</h4>
-                <p>text: {text}</p>
-                <p>Ratings: {ratings}</p>
+                <h4>{name}</h4>
+                <p><span style={{ color: 'green' }}>{review}</span></p>
+                <p className='ratings'>Ratings: <span style={{ color: '#4D96FF' }}>{ratings}</span></p>
             </div>
         </div>
     );

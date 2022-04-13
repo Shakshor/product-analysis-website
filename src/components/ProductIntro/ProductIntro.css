@@ -1,0 +1,26 @@
+.product-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 40px 15px 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.product-details {
+    width: 50%;
+    text-align: left;
+}
+
+.product-title {
+    color: green;
+}
+
+.product-pic {
+    width: 45%;
+}
+
+.product-pic img {
+    width: 90%;
+    height: 60vh;
+}
