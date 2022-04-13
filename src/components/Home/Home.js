@@ -16,7 +16,7 @@ const Home = () => {
             <ProductIntro></ProductIntro>
 
             <section className='reviews-section'>
-                <h2>Customer Reviews:{reviews.length}</h2>
+                <h2>Customer Reviews:{newReviews.length}</h2>
                 <div className='reviews-area'>
                     {
                         newReviews.map(review => <ReviewItem key={review.id} review={review}></ReviewItem>)
